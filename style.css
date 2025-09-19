@@ -1,43 +1,39 @@
-/* style.css */
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #fefdfb;
-  color: #003049;
-}
-
-header, footer {
-  background-color: #3b9fd9;
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-}
-
-h1, h2, h3 {
-  margin-top: 0;
-}
-
-section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-button, input[type="submit"] {
-  background-color: #fa7268;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 999px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-input[type="email"] {
-  padding: 0.75rem;
-  width: 250px;
-  margin-right: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
+:root{--bg:#fff;--ink:#0f172a;--muted:#64748b;--brand:#0ea5b7;--ring:#06b6d4;}
+*{box-sizing:border-box} body{margin:0;font:16px/1.5 system-ui,Segoe UI,Inter,Arial;color:var(--ink);background:#fff}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+.topbar{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e2e8f0}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-weight:800}
+.nav a{margin:0 12px;color:#334155;text-decoration:none}
+.cta{padding:8px 12px;border:1px solid var(--brand);border-radius:12px;color:#0e7490;text-decoration:none}
+.split{display:grid;gap:32px;align-items:center}
+@media(min-width:992px){.split{grid-template-columns:1.1fr 1fr}}
+.hero{background:linear-gradient(180deg,#ecfeff,white)}
+.hero h1{font-size:40px;line-height:1.1;margin:0}
+.accent{color:#0e7490}
+.hero .badges span{display:inline-block;margin:8px 8px 0 0;padding:6px 10px;border-radius:999px;border:1px solid #a5f3fc;background:#ecfeff}
+.signup{display:flex;gap:8px;margin-top:16px}
+.signup input{flex:1;padding:12px 14px;border:1px solid #cbd5e1;border-radius:12px;outline:none}
+.signup input:focus{box-shadow:0 0 0 4px rgba(6,182,212,.2)}
+.signup button{padding:12px 18px;border:0;border-radius:12px;background:#0e7490;color:#fff;font-weight:600}
+.hero-media img{width:100%;height:auto;border-radius:20px;box-shadow:0 10px 30px rgba(2,8,23,.08)}
+.kpis{padding:56px 0}
+.grid-3{display:grid;gap:16px}
+@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.kpi{border:1px solid #e2e8f0;border-radius:16px;padding:20px;background:#fff}
+.kpi-title{font-size:28px;font-weight:800}
+.tech,.products,.impact,.team,.cta-bottom{padding:72px 0}
+.cards{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+.card{border:1px solid #e2e8f0;border-radius:16px;padding:16px;background:#fff}
+.grid-2{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+.bullets li{margin:4px 0}
+.stats{margin:16px 0}
+.stat{font-size:28px;font-weight:800}
+.team .grid-2{grid-template-columns:1fr 1fr}
+.team-cards{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.team-card{display:flex;gap:12px;align-items:center;border:1px solid #e2e8f0;border-radius:16px;padding:12px;background:#fff}
+.team-card img{border-radius:999px;width:64px;height:64px;object-fit:cover}
+.center{text-align:center}
+.footer{border-top:1px solid #e2e8f0;padding:24px 0;margin-top:40px}
+.spread{display:flex;justify-content:space-between;align-items:center}
+.links a{margin-left:16px;color:#334155;text-decoration:none}
